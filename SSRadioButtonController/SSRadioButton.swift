@@ -14,6 +14,7 @@ class SSRadioButton: UIButton {
     
     fileprivate var circleLayer = CAShapeLayer()
     fileprivate var fillCircleLayer = CAShapeLayer()
+    
     override var isSelected: Bool {
         didSet {
             toggleButon()
@@ -22,7 +23,7 @@ class SSRadioButton: UIButton {
     /**
      Color of the radio button circle. Default value is UIColor red.
      */
-    @IBInspectable var circleColor: UIColor = UIColor.red {
+    @IBInspectable var circleColor: UIColor = UIColor.darkText {
         didSet {
             circleLayer.strokeColor = strokeColor.cgColor
             self.toggleButon()
@@ -42,7 +43,7 @@ class SSRadioButton: UIButton {
     /**
      Radius of RadioButton circle.
      */
-    @IBInspectable var circleRadius: CGFloat = 5.0
+    @IBInspectable var circleRadius: CGFloat = 10.0
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius

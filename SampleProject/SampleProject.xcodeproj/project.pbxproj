@@ -15,6 +15,7 @@
 		2D50744C1AC546BB005AD163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D50744A1AC546BB005AD163 /* LaunchScreen.xib */; };
 		2D5074581AC546BB005AD163 /* SampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5074571AC546BB005AD163 /* SampleProjectTests.swift */; };
 		2D5074631AC54740005AD163 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5074621AC54740005AD163 /* SSRadioButtonsController.swift */; };
+		C85C1EEB244568230095B330 /* RadioGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C1EEA244568230095B330 /* RadioGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2D5074561AC546BB005AD163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5074571AC546BB005AD163 /* SampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProjectTests.swift; sourceTree = "<group>"; };
 		2D5074621AC54740005AD163 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		C85C1EEA244568230095B330 /* RadioGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				2D5074621AC54740005AD163 /* SSRadioButtonsController.swift */,
 				1A7373761B09218100CB5FBC /* SSRadioButton.swift */,
+				C85C1EEA244568230095B330 /* RadioGroupView.swift */,
 			);
 			name = SSRadioButtonController;
 			path = ../SSRadioButtonController;
@@ -235,6 +238,7 @@
 				2D5074441AC546BB005AD163 /* ViewController.swift in Sources */,
 				2D5074421AC546BB005AD163 /* AppDelegate.swift in Sources */,
 				2D5074631AC54740005AD163 /* SSRadioButtonsController.swift in Sources */,
+				C85C1EEB244568230095B330 /* RadioGroupView.swift in Sources */,
 				1A7373771B09218100CB5FBC /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

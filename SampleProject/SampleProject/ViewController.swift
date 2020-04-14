@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, SSRadioButtonControllerDelegate {
+class ViewController: UIViewController, RadioGroupDelegate {
+    
 
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -19,16 +20,22 @@ class ViewController: UIViewController, SSRadioButtonControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        radioButtonController = SSRadioButtonsController(buttons: button1, button2, button3)
-        radioButtonController!.delegate = self
-        radioButtonController!.shouldLetDeSelect = false
-
+        let groupView = RadioGroupView(withGroupId: "groupOne", andOptions: [RadioOption(label: "Yes", optionValue: "yes"), RadioOption(label: "No", optionValue: "no")])
+        groupView.delegate = self
+        groupView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(groupView)
+        let leadingConstraint = NSLayoutConstraint(item: groupView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 20)
+        let trailingConstraint = NSLayoutConstraint(item: groupView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 20)
+        let topConstraint = NSLayoutConstraint(item: groupView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 100)
+        view.addConstraints([leadingConstraint, trailingConstraint, topConstraint])
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    func didSelectButton(selectedButton: UIButton?)
-    {
-        NSLog(" \(selectedButton)" )
+    func didSelectOption(option: RadioOption, groupId: String) {
+        print(option)
+        print(groupId)
     }
     
     override func didReceiveMemoryWarning() {
