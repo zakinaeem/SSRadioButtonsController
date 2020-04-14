@@ -21,7 +21,7 @@ class ViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         radioButtonController = SSRadioButtonsController(buttons: button1, button2, button3)
         radioButtonController!.delegate = self
-        radioButtonController!.shouldLetDeSelect = true
+        radioButtonController!.shouldLetDeSelect = false
 
         // Do any additional setup after loading the view, typically from a nib.
     }
